@@ -1,0 +1,182 @@
+/* Estilo geral do corpo */
+body {
+    background-image: url(../images/starwarstema3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #000; /* Fundo bem escuro para lembrar o espaço */
+    color: #CCC; /* Textos claros */
+    font-family: 'Star Jedi', sans-serif; /* Fonte temática de Star Wars */
+}
+
+/* Centralizando o app */
+#app {
+    text-align: center;
+    width: 820px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(17, 17, 17, 0.85); /* Fundo semitransparente */
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.1); /* Efeito de luz ao redor */
+}
+
+/* Estilo da seção superior (titulo e busca) */
+.top {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-bottom: 2px solid #FD4;
+}
+
+.top h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #FFE81F; /* Cor icônica do título, como o sabre de luz */
+    text-shadow: 2px 2px 8px #FFF; /* Efeito de brilho */
+}
+
+.top form {
+    text-align: right;
+}
+
+input {
+    padding: 0.75em 1.25em;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    background-color: #222;
+    color: #FFF;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+button {
+    padding: 0.75em 1.25em;
+    border-radius: 8px;
+    background-color: #FFE81F; /* Sabre de luz amarelo */
+    color: #111;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFF;
+    color: #111;
+    box-shadow: 0 0 15px 5px #FFE81F;
+}
+
+/* Área de personagens */
+.characters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.characters .item {
+    padding: 20px;
+    background-color: #222;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.characters .item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.characters .item img {
+    width: 100%;
+    border-radius: 50%; /* Personagens dentro de círculos */
+    border: 5px solid #111;
+    transition: all 0.3s ease;
+}
+
+.characters .item img:hover {
+    border: 5px solid #FFE81F; /* Efeito de brilho amarelo ao passar o mouse */
+    box-shadow: 0 0 15px #FFE81F;
+}
+
+.characters .item h2 {
+    font-size: 1.2rem;
+    color: #FFF;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Efeito de glow para os botões */
+button.glow {
+    background-color: transparent;
+    color: #FFF;
+    border: 2px solid #FD4;
+    position: relative;
+    box-shadow: 0 0 15px #FD4;
+    transition: box-shadow 0.3s ease;
+}
+
+button.glow:hover {
+    box-shadow: 0 0 30px #FD4;
+}
+
+/* Efeito de brilho ao redor dos personagens */
+@keyframes lightsaber {
+    0% {
+        box-shadow: 0 0 5px #FFE81F;
+    }
+    50% {
+        box-shadow: 0 0 20px #FFE81F;
+    }
+    100% {
+        box-shadow: 0 0 5px #FFE81F;
+    }
+}
+
+.characters .item:hover h2 {
+    animation: lightsaber 1.5s infinite ease-in-out;
+}
+
+/* Estilos de hover para o botão 'like' */
+.like-button {
+    background-color: #FD4;
+    color: #111;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.like-button:hover {
+    background-color: #FFE81F;
+},
+
+.characters .item button {
+    display: block;
+    width: 100%;
+    margin-top: 10px; /* Espaço entre os botões */
+    padding: 0.75em 1.25em;
+    border-radius: 8px;
+    background-color: #FFE81F; /* Cor amarela para o botão */
+    color: #111;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.characters .item button:first-child {
+    margin-top: 0; /* Remover o espaço superior no primeiro botão */
+}
+
+.characters .item button + button {
+    margin-top: 15px; /* Espaçamento entre o primeiro e o segundo botão */
+}
+
+.characters .item button:hover {
+    background-color: #FFF;
+    color: #111;
+    box-shadow: 0px 0px 15px 5px #FFE81F;
+}
+
